@@ -1,0 +1,50 @@
+{
+  "name": "FitForge AI - Smart Fitness Planner",
+  "short_name": "FitForge AI",
+  "description": "Transform your fitness journey with AI-powered workout plans, progress tracking, and personalized coaching",
+  "theme_color": "#00E676",
+  "background_color": "#0F0F0F",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/placeholder.svg",
+      "type": "image/svg+xml",
+      "sizes": "540x720",
+      "form_factor": "narrow"
+    }
+  ],
+  "categories": ["health", "fitness", "lifestyle"],
+  "shortcuts": [
+    {
+      "name": "Start Workout",
+      "short_name": "Workout",
+      "description": "Generate a new AI workout plan",
+      "url": "/generator",
+      "icons": [{ "src": "/favicon.ico", "sizes": "32x32" }]
+    },
+    {
+      "name": "Progress Dashboard",
+      "short_name": "Progress",
+      "description": "View your fitness analytics",
+      "url": "/dashboard",
+      "icons": [{ "src": "/favicon.ico", "sizes": "32x32" }]
+    },
+    {
+      "name": "AI Coach",
+      "short_name": "Coach",
+      "description": "Chat with your AI fitness coach",
+      "url": "/coach",
+      "icons": [{ "src": "/favicon.ico", "sizes": "32x32" }]
+    }
+  ]
+}

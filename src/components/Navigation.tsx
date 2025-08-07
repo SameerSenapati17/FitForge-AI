@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Home, Dumbbell, BarChart, MessageSquare, Zap } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 
 const Navigation = () => {
   const location = useLocation();
@@ -43,21 +44,25 @@ const Navigation = () => {
             ))}
           </div>
           
-          {/* Mobile menu - simplified for now */}
-          <div className="md:hidden flex items-center space-x-2">
-            {navItems.map(({ path, icon: Icon }) => (
-              <Link
-                key={path}
-                to={path}
-                className={`p-2 rounded-lg transition-all duration-200 ${
-                  isActive(path)
-                    ? "bg-primary text-primary-foreground"
-                    : "text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                <Icon className="w-5 h-5" />
-              </Link>
-            ))}
+          <div className="flex items-center space-x-2">
+            <ThemeToggle />
+            
+            {/* Mobile menu */}
+            <div className="md:hidden flex items-center space-x-2 ml-2">
+              {navItems.map(({ path, icon: Icon }) => (
+                <Link
+                  key={path}
+                  to={path}
+                  className={`p-2 rounded-lg transition-all duration-200 ${
+                    isActive(path)
+                      ? "bg-primary text-primary-foreground"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  <Icon className="w-5 h-5" />
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </div>
