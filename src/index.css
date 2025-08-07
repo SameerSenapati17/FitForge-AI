@@ -8,35 +8,53 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* FitForge AI Design System - Dark Mode Focused */
+    --background: 0 0% 6%;
+    --foreground: 0 0% 100%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 11%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 11%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 145 100% 45%;
+    --primary-foreground: 0 0% 6%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 165 82% 51%;
+    --secondary-foreground: 0 0% 6%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 145 100% 45%;
+    --accent-foreground: 0 0% 6%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 145 100% 45%;
 
-    --radius: 0.5rem;
+    /* Enhanced design tokens */
+    --primary-glow: 145 100% 55%;
+    --secondary-glow: 165 82% 61%;
+    --hover-primary: 145 100% 39%;
+    --surface-elevated: 0 0% 13%;
+    --glass-bg: 0 0% 6% / 0.8;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(145 100% 45%), hsl(165 82% 51%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 11%), hsl(0 0% 13%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 6%) 0%, hsl(145 100% 45% / 0.1) 100%);
+    
+    /* Shadows & Effects */
+    --shadow-neon: 0 0 20px hsl(145 100% 45% / 0.3);
+    --shadow-card: 0 10px 30px hsl(0 0% 0% / 0.3);
+    --shadow-glow: 0 0 40px hsl(145 100% 45% / 0.2);
+    
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +118,24 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary));
+    border-radius: 3px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary-glow));
   }
 }
